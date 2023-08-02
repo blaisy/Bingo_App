@@ -1,4 +1,4 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, Button } from 'react-native';
 import React from 'react';
 
 /**
@@ -24,12 +24,11 @@ export default class Login extends React.Component {
         return (
             <View>
                 <View className="bg-green-900 flex items-center justify-center h-screen ">
-                  
-                    <View className=" text-white  pb-20  ">
-                        <Image className=" h-80 w-80 rounded-full"
-                        source={{
-                            uri: 'https://images.unsplash.com/photo-1559509546-4f2fdd5d5825?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80',
-                          }} />
+                    <View className=" text-white  pb-10  ">
+                        <Image className=" h-60 w-60 rounded-full"
+                            source={{
+                                uri: 'https://images.unsplash.com/photo-1559509546-4f2fdd5d5825?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80',
+                            }} />
                     </View>
 
                     <View className="text-white pb-10 ">
@@ -37,22 +36,23 @@ export default class Login extends React.Component {
                     </View>
 
                     <View className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                        <Text className="text-white">✉️ Sign in with email</Text>
+                        <Button title='Sign-In with email' color={"white"}></Button>
                     </View>
-                    
+
                     <View className="pt-10 flex flex-row">
                         <View className="text-white bg-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                            <Text className="">Google</Text>
+                            <Button title='Google' color={"black"}></Button>
                         </View>
                         <View className="text-white bg-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                            <Text className="">Apple id</Text>
+                            <Button title='AppleId' color={"black"}></Button>
                         </View>
                     </View >
-                
+
                 </View>
             </View>
         );
     }
+    // <Text className="">Apple id</Text>
 
     handleChange(event) {
         this.setState({
