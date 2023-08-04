@@ -1,6 +1,6 @@
 import { View, Text, Image, Button } from 'react-native';
 import React from 'react';
-
+import EcoButton from '../../Utils/EcoButton';
 /**
  * This is the main core of the component Login.
  * It renders the login form. It also check if the user is logged in or not and retrieve 
@@ -39,20 +39,18 @@ export default class Login extends React.Component {
                         <Button title='Sign-In with email' color={"white"}></Button>
                     </View>
 
+                    {/* This button have to interface the google client */}
                     <View className="pt-10 flex flex-row">
-                        <View className="text-white bg-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                            <Button title='Google' color={"black"}></Button>
-                        </View>
-                        <View className="text-white bg-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                            <Button title='AppleId' color={"black"}></Button>
-                        </View>
+                        <EcoButton txt="Google"  bg = "white" color="white"/>
+                        <EcoButton txt="AppleId" bg = "white" color="white"/>
                     </View >
 
                 </View>
+
             </View>
         );
     }
-    // <Text className="">Apple id</Text>
+    // <EcoButton txt = "test" bg = "red"></EcoButton>
 
     handleChange(event) {
         this.setState({
