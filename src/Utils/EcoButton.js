@@ -50,7 +50,10 @@ export default class EcoButton extends React.Component {
                 dark:hover:bg-blue-700 
                 focus:outline-none 
                 dark:focus:ring-blue-800`}>
-                <Button title={`${this.getTxt(this.props.txt)}`} color={`${this.getTxtColor(this.props.color) == undefined ? 'white' : this.props.color}`} />
+        
+                <Button 
+                    title={`${this.getTxt(this.props.txt)}`} color={`${this.getTxtColor(this.props.color)}`} 
+                />
             </View>
         );
     }
