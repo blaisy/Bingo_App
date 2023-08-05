@@ -12,7 +12,7 @@ import { ImageBackground } from 'react-native';
  * @params {String}
  * @return {HTMLElement}
  */
-
+// ciao
 export default class Login extends React.Component {
     constructor(props) {
         super(props);
